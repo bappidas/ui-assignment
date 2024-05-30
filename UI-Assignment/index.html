@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VENIA">
+    <meta name="description" content="Welcome to VENIA, the premier e-commerce destination designed to elevate your shopping experience. Discover a curated selection of premium products, including Men's Clothing, Women's Wear, Jewelry, and Electronics, all available at your fingertips. VENIA simplifies your shopping journey, offering unparalleled quality and convenience.">
+    
+    <title>VENIA | All Products</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/product-listing.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+</head>
+<body class="preload">
+    
+    <header id="header" class="header">        
+        <nav class="navbar container">
+            <div class="navbar-inner">              
+              <div class="burger" id="burger">
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+                <span class="burger-line"></span>
+              </div>
+              
+              <a href="./index.html" class="brand">
+                  <img src="./assets/images/logo.png" alt="logo">
+              </a>
+              <div class="cart_wrapper">
+                <img class="cart" width="50" height="50" src="./assets/images/cart-icon.png" alt="shopping-cart--v1"/>
+                <span class="cart_item">10</span>
+              </div>                          
+            </div>
+
+            <div class="navbar-block" id="menu">
+              <ul class="menu">
+                <li class="menu-item active"><a href="./index.html" class="menu-link">Home</a></li>             
+                <li class="menu-item"><a href="#" class="menu-link">Women</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Men</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Smart Gear</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Accessories</a></li>
+              </ul>
+            </div>
+        </nav>
+    </header>     
+    
+    <section class="banner">
+        <div class="page_heading">
+            <h1 class="page_heading__title_text">All<br/>Products</h1>
+        </div>
+    </section>
+
+    <div class="product_listing_area">
+      
+      <div class="area_breadcrumb_n_filter">
+        <div class="breadcrumb_wrapper">Home / All Products</div>
+        
+        <div class="cta_wrapper_sm">
+          <div id="filteResultCta" class="filter_results">
+            <img class="cta_icon" src="./assets/images/filter-icon.png" alt="filter-icon">
+            <a href="javascript:void(0)">Filter Results</a>
+          </div>
+          <div class="sort_products">
+            <img class="cta_icon" src="./assets/images/sort-icon.png" alt="sort-icon">
+            <a href="javascript:void(0)">Sort Products</a>
+          </div>
+        </div>
+
+        <div class="cta_wrapper_md">
+          <p class="cta_title">Filters</p>
+          <div class="cat_wrapper">
+            <span class="multi_select_title">Categories</span>
+            <div class="multi_select_options">
+              <div class="form_group">
+                <input type="checkbox" id="jewellery" value="jewelery">
+                <label for="jewellery">Jewellery</label>
+              </div>
+              <div class="form_group">
+                <input type="checkbox" id="electronics" value="electronics">
+                <label for="electronics">Electronics</label>
+              </div>
+              <div class="form_group">
+                <input type="checkbox" id="menClothing" value="men's clothing">
+                <label for="menClothing">Men's Clothing</label>
+              </div>
+              <div class="form_group">
+                <input type="checkbox" id="womenClothing" value="women's clothing">
+                <label for="womenClothing">Women's Clothing</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="area_result_text">
+        <div id="resultText" class="result_text">10 Results</div>
+        <div class="sort_dropdown_wrapper">
+          <div class="select_dropdown">
+            <select>
+              <option value="">Sort Products</option>
+              <option value="priceAsc">Sort by Price (Low to High)</option>
+              <option value="priceDes">Sort by Price (High to Low)</option>
+              <option value="ratingAsc">Sort by Ratings (Low to High)</option>
+              <option value="ratingDsc">Sort by Ratings (High to Low)</option>
+            </select>
+          </div>          
+        </div>        
+      </div>
+      
+      <div class="area_search_wrapper">
+        <p class="search_error">Please type something to search</p>
+        <input type="search" name="search_input" id="searchText" class="search_text" placeholder="Search for Products" autocomplete="off">        
+        <button id="searchBtn" class="search_btn">
+          <img class="search_icon" src="./assets/images/search-icon.png" alt="search-icon">
+          <span>Search</span>
+        </button>
+      </div>
+
+      <div class="area_product_display">
+
+        <div class="products_wrapper" id="page1"></div>
+        <div class="products_wrapper" id="filteredProducts"></div>
+        
+        <div class="load_more_cta_wrapper">
+          <button id="loadMore" class="load_more_btn">
+            <span>Load More</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <section class="footer_top">
+        <div class="footer_info_box">
+          <div class="info_box__title">Account</div>
+          <ul class="info_box__links">
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Sign In</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Register</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Order Status</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_info_box">
+          <div class="info_box__title">About Us</div>
+          <ul class="info_box__links">
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Our Story</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Email Sign Up</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Give Back</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_info_box">
+          <div class="info_box__title">Help</div>
+          <ul class="info_box__links">
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Live Chat</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Contact Us</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Order Status</a></li>
+            <li class="link"><a href="javascript:void(0)" class="footer_link">Returns</a></li>
+          </ul>
+        </div>
+
+        <div class="footer_info_box">
+          <div class="info_box__title">Follow Us</div>
+          <p class="info_box__para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat sapiente facilis architecto fugit non provident facere quo.</p>
+          <div class="info_box__image-wrapper">
+            <div class="social_icon_wrapper">
+              <a href="javascript:void(0)">
+                <img src="./assets/images/instagram.svg" alt="social-icon">
+              </a>
+            </div>
+            
+            <div class="social_icon_wrapper">
+              <a href="javascript:void(0)">
+                <img src="./assets/images/facebook.svg" alt="social-icon">
+              </a>
+            </div>
+
+            <div class="social_icon_wrapper">
+              <a href="javascript:void(0)">
+                <img src="./assets/images/twitter.svg" alt="social-icon">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer_bottom">
+        <div class="privacy_link">
+          <a href="javascript:void(0)" class="link">Terms of Use</a>
+          <a href="javascript:void(0)" class="link">Privacy Policy</a>
+        </div>
+        <div class="copyright_info">
+          <span class="company_name">© Company Name</span>&nbsp;
+          <span class="company_addr">Address Ave, City Name, State ZIP</span>
+        </div>
+        <div class="footer_logo_wrapper">
+          <a href="javascript:void(0);" class="footer_logo">
+            <img src="./assets/images/logo-black.png" alt="logo">
+          </a>
+        </div>
+      </section>
+    </footer>
+
+
+
+    <!-- Preloader Starts -->
+    <div id="preloader">
+        <div id="status">
+          &nbsp;
+          <div id="logo">
+            <img src="./assets/images/loader-logo.png" width="100px" height="100px">
+          </div>
+        </div>
+        <div id="loading-text"></div>
+    </div>
+    <!-- Preloader Ends -->
+
+    <!-- Modal Starts -->
+    <div class="modal">
+      <div class="wrapper">
+        <div class="modal_header"></div>   
+        <div class="modal_container"></div>  
+        <div class="modal_footer"></div> 
+      </div>
+    </div>
+    <!-- Modal Ends -->
+
+    <!-- Filder Results Window for Small Devices Starts -->
+    <div class="filter_window_sm">
+        <div class="fw_header">
+          <div class="title">Filter</div>
+          <img class="close_icon" src="./assets/images/close-icon.png" alt="close-icon">
+        </div>
+
+        <div class="fw_wrapper">
+            <div class="clear_cta">
+              <span  id="clearFilter">Clear All</span>
+              </div>
+            <div class="cat_wrapper">
+              <span class="multi_select_title">Categories</span>
+              <div class="multi_select_options">
+                <div>
+                  <input type="checkbox" id="jewellery" name="jewellery" value="jewelery">
+                  <label for="jewellery">Jewellery</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="electronics" name="electronics" value="electronics">
+                  <label for="electronics">Electronics</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="menClothing" name="menClothing" value="men's clothing">
+                  <label for="menClothing">Men's Clothing</label>
+                </div>
+                <div>
+                  <input type="checkbox" id="womenClothing" id="womenClothing" value="women's clothing">
+                  <label for="womenClothing">Women's Clothing</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="fw_cta_wrapper">
+              <button id="fwCta">SEE RESULTS</button>
+            </div>
+        </div>
+    </div>
+    <!-- Filder Results Window for Small Devices Starts -->
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

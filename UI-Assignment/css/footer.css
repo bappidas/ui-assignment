@@ -1,0 +1,244 @@
+.footer{
+    width: 100%;
+    min-height: 30rem;
+    height: auto;
+    margin-top: 2rem;
+    border-top: 0.4rem solid #b4b4b4;
+}
+
+
+
+.footer_top{
+    width: 100%;
+    padding: 5rem 4dvw;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer_info_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    color: #545D63;
+}
+
+.footer_info_box .info_box__title{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1B252C;
+}
+
+.footer_info_box .info_box__links{
+    list-style-type: none;
+}
+
+.footer_info_box .info_box__links .link{
+    margin-bottom: 0.7rem;
+}
+
+.footer_info_box .info_box__links .link .footer_link{
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #545D63;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer_info_box .info_box__para{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #545D63;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+
+.footer_info_box .info_box__image-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+
+.footer_info_box .info_box__image-wrapper .social_icon_wrapper{
+    width: 3.2rem;
+    height: 3.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_info_box .info_box__image-wrapper .social_icon_wrapper a img{
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.footer_bottom{
+    width: 100%;
+    margin-top: 2rem;
+    border-top: 0.2rem solid #b4b4b4;
+    padding: 2rem 4dvw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-row-gap: 3rem;
+}
+
+.footer_bottom .privacy_link{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.footer_bottom .privacy_link .link{
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #1B252C;
+    text-decoration: underline;
+}
+
+.footer_bottom  .copyright_info{
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.footer_bottom  .copyright_info .company_name,
+.footer_bottom  .copyright_info .company_addr{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #545D63;
+    text-align: center;
+    line-height: 0;
+}
+
+.footer_bottom  .footer_logo_wrapper{
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.footer_bottom  .footer_logo_wrapper .footer_logo{
+    width: 12rem;
+    height: auto;
+}
+
+
+.footer_bottom  .footer_logo_wrapper .footer_logo img{
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .footer_top{
+        padding: 5rem 5dvw;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .footer_bottom{    
+        grid-template-columns: repeat(3, 33.3%);
+        grid-template-rows: 1fr;
+        grid-row-gap: unset;
+        grid-column-gap: 0;
+        padding: 2rem 5dvw;
+    }
+
+    .footer_bottom .privacy_link{
+        grid-column: 3 / -1;
+        grid-row: 1 / -1;
+    
+        width: 100%;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+
+    .footer_bottom  .copyright_info{
+        grid-column: 2 / 3;
+        grid-row: 1 / -1;
+        
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    .footer_bottom  .copyright_info .company_name,
+    .footer_bottom  .copyright_info .company_addr{
+        line-height: 0.25;
+    }
+
+    .footer_bottom  .footer_logo_wrapper{
+        grid-column: 1 / 2;
+        grid-row: 1 / -1;
+    
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+@media screen and (min-width: 1080px) {
+    .footer_bottom {
+        padding: 2rem 7dvw;
+    }
+
+    .footer_top{
+        padding: 5rem 7dvw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .footer_bottom {
+        padding: 2rem 8.5dvw;
+    }
+
+    .footer_top{
+        padding: 5rem 8.5dvw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .footer_bottom {
+        padding: 2rem 10dvw;
+    }
+
+    .footer_top{
+        padding: 5rem 10dvw;
+    }
+}

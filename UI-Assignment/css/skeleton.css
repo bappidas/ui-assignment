@@ -1,0 +1,143 @@
+.skeleton_image,
+.skeleton_text,
+.skeleton_heart {
+    background: #e0e0e0;
+    border-radius: 4px;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton_image {
+    width: 16.4rem;
+    height: 19.6rem;
+    margin-bottom: 1rem;
+}
+
+.skeleton_text {
+    height: 1.6rem;
+    margin: 0.5rem 0;
+}
+
+.skeleton_name {
+    width: 80%;
+}
+
+.skeleton_price {
+    width: 50%;
+}
+
+.skeleton_heart {
+    width: 2.4rem;
+    height: 2.4rem;
+    margin-top: 1rem;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -40rem 0;
+    }
+    100% {
+        background-position: 40rem 0;
+    }
+}
+
+.skeleton_image,
+.skeleton_text,
+.skeleton_heart {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+}
+
+
+.area_product_display {
+    width: 100%;
+    padding: 1rem 0;
+    min-height: 500px;
+    background-color: #fdfdfd;    
+}
+
+.products_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.product_card {
+    width: 16rem;
+    padding: 1rem;
+    height: auto;
+    background-color: #fff;
+    border: 0.4rem solid transparent;
+    transition: all 0.6s;
+}
+
+.product_card:hover {
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.6s;
+    cursor: pointer;
+}
+
+.product_image {
+    width: 16.4rem;
+    height: auto;
+    max-height: 19.6rem;
+    object-fit: contain;
+}
+
+.product_info_skeleton {
+    width: 100%;
+    padding-left: 3.5rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.7rem;
+}
+
+.product_name {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: #172026;
+}
+
+.product_price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #172026;
+}
+
+.heart_wrapper {
+    font-size: 2.4rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .area_product_display {
+        width: calc(100% - 1rem);
+        margin-left: 1rem;
+        padding: 3rem 0;
+        min-height: 500px;
+    }
+
+    .product_card {
+        width: 24rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .product_name,
+    .product_price,
+    .heart_wrapper {
+        padding: 0 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .product_card:hover {
+        box-shadow: 1rem 2rem 3rem rgba(0, 0, 0, 0.1);
+        border: 0.4rem solid #f2f2f2;
+    }
+}

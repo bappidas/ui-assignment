@@ -1,0 +1,175 @@
+/* Reset CSS Starts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+*,
+*::after,
+*::before{
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+}
+
+a:link, a:visited{
+	text-decoration: none;
+	color:inherit;
+}
+html{
+	font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+	font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 1.6;
+	box-sizing: border-box;
+}
+/* Reset CSS Ends */
+
+
+
+/* Pre-Loader CSS Starts */
+#preloader{
+	background-color: #fff;
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:99999; 
+}
+
+#status{
+	background-image: url("https://i.imgur.com/f3O0XXT.gif");
+	background-repeat: no-repeat;
+	width: 30rem;
+	height: 30rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -10.8rem;
+	margin-left: -10.8rem;
+}
+
+#preloader #logo{
+	width: 10rem;
+	height: 10rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: -9.9rem;
+	margin-left: -9.9rem;
+}
+
+#preloader #loading-text{
+	background-image: url("https://i.imgur.com/bYQnOgT.gif");
+	background-repeat: no-repeat;
+	width: 16rem;
+	height: 3rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: 10.1rem;
+	margin-left: -7.3rem;
+}
+/* Pre-Loader CSS Ends */
+
+.wrapper {
+    width: 100%;
+    padding: 0 4dvw;
+}
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 5dvw;
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .wrapper {
+        padding: 0 7dvw;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        padding: 0 8.5dvw;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .wrapper {
+        padding: 0 10dvw;
+    }
+}
+
+
+
+.modal{
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	z-index: 99;
+	background-color:rgba(0,0,0,.9);
+	font-size:1.4rem;
+	
+	opacity:0;
+	visibility:hidden;
+	transform:scale(1.2);
+	transition: all 0.3s ease-out;
+  }
+  
+  .modal .wrapper{
+	position:absolute;
+	left: 50%;
+	top: 60%;
+	transform: translate(-50%, -50%);
+	width: 70%;
+	height: auto;
+	background-color:#f2f2f2;
+	border-radius:3px;  
+  }
+  
+  .modal .wrapper .modal_header{
+	height: 5rem;
+	background-color:#1B252C;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 1rem;
+	font-size: 1.6rem;
+	font-weight: 400;
+  }
+  
+  .modal .wrapper .modal_container{
+	min-height:400px;
+	height: auto;
+	overflow-y: scroll;
+	font-size:1.4rem;
+	padding: 0.7rem;
+  }
+  
+  .modal.is_visible{
+	opacity:1;
+	visibility:visible;
+	transform:scale(1);
+  }
+
+  .sr_text{
+	font-size: 1.4rem;
+	color: #1B252C;
+	margin: 2rem auto;
+	text-align: center;
+  }
+
+  .note_text{
+	font-size: 1.2rem;
+	color: #c4003e;
+	margin: 3rem auto;
+	text-align: center;
+  }
+
+  
